@@ -1,0 +1,19 @@
+{
+
+
+ "setting" : "الاعدادات",
+  "language" : "اللغه",
+  "english" : "الانجليزيه",
+  "arabic" : "العربيه",
+  "theme" : "الثيم",
+  "lightMood" : "الوضع النهاري",
+  "darkMood" : "الوضع الليلي",
+  "tasks" : "المهام",
+  "delete" : "حذف",
+  "addNewTask" : "أضف مهمه جديده",
+    "enterYourTask" : "أدخل مهمتك",
+    "description" : "الوصف",
+    "selectData" : "أختيار التاريخ",
+    "add" : "اضافه"
+
+}

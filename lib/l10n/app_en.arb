@@ -1,0 +1,18 @@
+{
+
+  "setting" : "Setting",
+  "language" : "Language",
+  "english" : "English",
+  "arabic" : "Arabic",
+  "theme" : "Theme",
+  "lightMood" : "Light Mood",
+  "darkMood" : "Dark Mood",
+  "tasks" : "Tasks",
+  "delete" : "Delete",
+  "addNewTask" : "Add New Task",
+  "enterYourTask" : "Enter your Task",
+  "description" : "Description",
+  "selectData" : "Select Data",
+  "add" : "Add"
+
+}
