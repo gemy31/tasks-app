@@ -10,16 +10,12 @@ class LanguageBottomSheet extends StatefulWidget {
 }
 
 class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
-<<<<<<< HEAD
-  late var provider ;
+
+late var provider ;
   @override
   Widget build(BuildContext context) {
      provider = Provider.of<AppConfigProvider>(context);
-=======
-  @override
-  Widget build(BuildContext context) {
-    var provider = Provider.of<AppConfigProvider>(context);
->>>>>>> origin/master
+
     return Container(
       margin: const EdgeInsets.all(20),
       child: Column(
@@ -57,25 +53,17 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
         Text(
           text,
           style: TextStyle(
-<<<<<<< HEAD
             color: provider.appTheme == ThemeMode.light
-          ? MyThemeData.primaryblue
-            : MyThemeData.darkBlueColor,
-=======
-            color: MyThemeData.primaryblue,
->>>>>>> origin/master
+                ? MyThemeData.primaryblue
+                : MyThemeData.darkBlueColor,
             fontSize: 25,
           ),
         ),
         Icon(
           Icons.check,
-<<<<<<< HEAD
-          color:provider.appTheme == ThemeMode.light
+          color: provider.appTheme == ThemeMode.light
               ? MyThemeData.primaryblue
-              : MyThemeData.darkBlueColor ,
-=======
-          color: MyThemeData.blackColor,
->>>>>>> origin/master
+              : MyThemeData.darkBlueColor,
         )
       ],
     );

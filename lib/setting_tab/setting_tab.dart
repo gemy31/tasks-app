@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -10,27 +9,17 @@ import '../provider/setting_provider.dart';
 import 'language_bottom_sheet.dart';
 
 class SettingTab extends StatefulWidget {
-
-=======
-import 'package:provider/provider.dart';
-import 'package:to_do_app/setting_tab/theme_bottom_sheet.dart';
-import '../my_theme.dart';
-import '../provider/setting_provider.dart';
-import 'language_bottom_sheet.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-class SettingTab extends StatefulWidget {
-  const SettingTab({Key? key}) : super(key: key);
->>>>>>> origin/master
+  SettingTab({Key? key}) : super(key: key);
 
   @override
   State<SettingTab> createState() => _SettingTabState();
 }
 
 class _SettingTabState extends State<SettingTab> {
+  late var provider ;
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<AppConfigProvider>(context);
+     provider = Provider.of<AppConfigProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Column(
@@ -53,11 +42,7 @@ class _SettingTabState extends State<SettingTab> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: provider.appTheme == ThemeMode.light
-<<<<<<< HEAD
                       ? MyThemeData.whiteColor
-=======
-                      ? MyThemeData.primaryblue
->>>>>>> origin/master
                       : MyThemeData.backgroundDark),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,26 +51,16 @@ class _SettingTabState extends State<SettingTab> {
                       provider.appLanguage == 'en'
                           ? AppLocalizations.of(context)!.english
                           : AppLocalizations.of(context)!.arabic,
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleLarge
-<<<<<<< HEAD
-                          ?.copyWith(color: provider.appTheme == ThemeMode.light
-                          ? MyThemeData.primaryblue
-                          : MyThemeData.darkBlueColor)),
-                   Icon(
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          color: provider.appTheme == ThemeMode.light
+                              ? MyThemeData.primaryblue
+                              : MyThemeData.darkBlueColor)),
+                  Icon(
                     Icons.arrow_drop_down_outlined,
                     size: 40,
                     color: provider.appTheme == ThemeMode.light
                         ? MyThemeData.primaryblue
                         : MyThemeData.darkBlueColor,
-=======
-                          ?.copyWith(color: provider.appTheme == ThemeMode.light? MyThemeData.whiteColor:MyThemeData.whiteColor)),
-                  const Icon(
-                    Icons.arrow_drop_down_outlined,
-                    size: 40,
-                    color:Colors.white,
->>>>>>> origin/master
                   )
                 ],
               ),
@@ -113,11 +88,7 @@ class _SettingTabState extends State<SettingTab> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: provider.appTheme == ThemeMode.light
-<<<<<<< HEAD
                       ? MyThemeData.whiteColor
-=======
-                      ? MyThemeData.primaryblue
->>>>>>> origin/master
                       : MyThemeData.backgroundDark),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,29 +97,18 @@ class _SettingTabState extends State<SettingTab> {
                     provider.appTheme == ThemeMode.light
                         ? AppLocalizations.of(context)!.lightMood
                         : AppLocalizations.of(context)!.darkMood,
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleLarge
-<<<<<<< HEAD
-                        ?.copyWith(color:  provider.appTheme == ThemeMode.light
-                        ? MyThemeData.primaryblue
-                        : MyThemeData.darkBlueColor),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        color: provider.appTheme == ThemeMode.light
+                            ? MyThemeData.primaryblue
+                            : MyThemeData.darkBlueColor),
                   ),
-                   Icon(
+                  Icon(
                     Icons.arrow_drop_down_outlined,
                     size: 40,
                     color: provider.appTheme == ThemeMode.light
                         ? MyThemeData.primaryblue
                         : MyThemeData.darkBlueColor,
-=======
-                        ?.copyWith(color: provider.appTheme == ThemeMode.light? MyThemeData.whiteColor:MyThemeData.whiteColor),
                   ),
-                  const Icon(
-                    Icons.arrow_drop_down_outlined,
-                    size: 40,
-                    color:Colors.white,
->>>>>>> origin/master
-                  )
                 ],
               ),
             ),

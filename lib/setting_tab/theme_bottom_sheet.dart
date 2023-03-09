@@ -50,21 +50,21 @@ class ThemeBottomSheet extends StatelessWidget {
               fontSize: 25,
               color: provider.appTheme == ThemeMode.light
                   ? MyThemeData.primaryblue
-<<<<<<< HEAD
+
                   : MyThemeData.darkBlueColor),
-=======
-                  : MyThemeData.blackColor),
->>>>>>> origin/master
+
+
+
         ),
         Icon(
           Icons.check,
           color: provider.appTheme == ThemeMode.light
               ? MyThemeData.primaryblue
-<<<<<<< HEAD
+
               : MyThemeData.darkBlueColor,
-=======
-              : MyThemeData.blackColor,
->>>>>>> origin/master
+
+
+
         ),
       ],
     );

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do_app/firebase_utils/firebase_utils.dart';
 import 'package:to_do_app/home/task_item.dart';
+import 'package:to_do_app/provider/setting_provider.dart';
 import '../model/task.dart';
 import '../my_theme.dart';
 import '../provider/list_provider.dart';
@@ -22,6 +23,7 @@ class _TaskListTabState extends State<TaskListTab> {
   Widget build(BuildContext context) {
     listProvider = Provider.of<ListProvider>(context);
     listProvider.getTaskFromFireStore();
+    var provider = Provider.of<AppConfigProvider>(context);
     return Column(
       children: [
         CalendarTimeline(
@@ -35,13 +37,13 @@ class _TaskListTabState extends State<TaskListTab> {
           onDateSelected: (date) {
             listProvider.changeSelectedDate(date);
           },
-          leftMargin: 20,
+          leftMargin: 21,
           monthColor: MyThemeData.primaryblue,
-          dayColor: MyThemeData.blackColor,
+          dayColor: provider.appTheme==ThemeMode.light ? MyThemeData.blackColor : MyThemeData.whiteColor,
           activeDayColor: Colors.white,
           activeBackgroundDayColor: MyThemeData.primaryblue,
           dotsColor: const Color(0xFF333A47),
-          locale: 'en_ISO',
+          locale: provider.appLanguage,
         ),
         const SizedBox(
           height: 10,

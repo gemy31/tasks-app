@@ -78,7 +78,7 @@ class _AddTaskBottomSheetState extends State<AddTaskBottomSheet> {
                       )),
                 ),
                 const SizedBox(
-                  height: 12,
+                  height: 10,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -90,7 +90,7 @@ class _AddTaskBottomSheetState extends State<AddTaskBottomSheet> {
                       ),
                     ),
                     const SizedBox(
-                      height: 12,
+                      height: 10,
                     ),
                     InkWell(
                       onTap: () {
@@ -105,7 +105,7 @@ class _AddTaskBottomSheetState extends State<AddTaskBottomSheet> {
                       ),
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     ElevatedButton(
                       onPressed: () {
