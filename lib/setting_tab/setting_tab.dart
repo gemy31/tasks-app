@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -10,6 +11,17 @@ import 'language_bottom_sheet.dart';
 
 class SettingTab extends StatefulWidget {
 
+=======
+import 'package:provider/provider.dart';
+import 'package:to_do_app/setting_tab/theme_bottom_sheet.dart';
+import '../my_theme.dart';
+import '../provider/setting_provider.dart';
+import 'language_bottom_sheet.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+class SettingTab extends StatefulWidget {
+  const SettingTab({Key? key}) : super(key: key);
+>>>>>>> origin/master
 
   @override
   State<SettingTab> createState() => _SettingTabState();
@@ -41,7 +53,11 @@ class _SettingTabState extends State<SettingTab> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: provider.appTheme == ThemeMode.light
+<<<<<<< HEAD
                       ? MyThemeData.whiteColor
+=======
+                      ? MyThemeData.primaryblue
+>>>>>>> origin/master
                       : MyThemeData.backgroundDark),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,6 +69,7 @@ class _SettingTabState extends State<SettingTab> {
                       style: Theme.of(context)
                           .textTheme
                           .titleLarge
+<<<<<<< HEAD
                           ?.copyWith(color: provider.appTheme == ThemeMode.light
                           ? MyThemeData.primaryblue
                           : MyThemeData.darkBlueColor)),
@@ -62,6 +79,13 @@ class _SettingTabState extends State<SettingTab> {
                     color: provider.appTheme == ThemeMode.light
                         ? MyThemeData.primaryblue
                         : MyThemeData.darkBlueColor,
+=======
+                          ?.copyWith(color: provider.appTheme == ThemeMode.light? MyThemeData.whiteColor:MyThemeData.whiteColor)),
+                  const Icon(
+                    Icons.arrow_drop_down_outlined,
+                    size: 40,
+                    color:Colors.white,
+>>>>>>> origin/master
                   )
                 ],
               ),
@@ -89,7 +113,11 @@ class _SettingTabState extends State<SettingTab> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: provider.appTheme == ThemeMode.light
+<<<<<<< HEAD
                       ? MyThemeData.whiteColor
+=======
+                      ? MyThemeData.primaryblue
+>>>>>>> origin/master
                       : MyThemeData.backgroundDark),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,6 +129,7 @@ class _SettingTabState extends State<SettingTab> {
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge
+<<<<<<< HEAD
                         ?.copyWith(color:  provider.appTheme == ThemeMode.light
                         ? MyThemeData.primaryblue
                         : MyThemeData.darkBlueColor),
@@ -111,6 +140,14 @@ class _SettingTabState extends State<SettingTab> {
                     color: provider.appTheme == ThemeMode.light
                         ? MyThemeData.primaryblue
                         : MyThemeData.darkBlueColor,
+=======
+                        ?.copyWith(color: provider.appTheme == ThemeMode.light? MyThemeData.whiteColor:MyThemeData.whiteColor),
+                  ),
+                  const Icon(
+                    Icons.arrow_drop_down_outlined,
+                    size: 40,
+                    color:Colors.white,
+>>>>>>> origin/master
                   )
                 ],
               ),
