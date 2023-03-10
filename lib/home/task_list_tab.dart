@@ -26,25 +26,26 @@ class _TaskListTabState extends State<TaskListTab> {
     var provider = Provider.of<AppConfigProvider>(context);
     return Column(
       children: [
-        CalendarTimeline(
-          initialDate: listProvider.selectedDate,
-          firstDate: DateTime.now().subtract(
-            const Duration(days: 360),
+            CalendarTimeline(
+            initialDate: listProvider.selectedDate,
+            firstDate: DateTime.now().subtract(
+              const Duration(days: 360),
+            ),
+            lastDate: DateTime.now().add(
+              const Duration(days: 360),
+            ),
+            onDateSelected: (date) {
+              listProvider.changeSelectedDate(date);
+            },
+            leftMargin: 20,
+            monthColor: MyThemeData.primaryblue,
+            dayColor: provider.appTheme==ThemeMode.light ? MyThemeData.blackColor : MyThemeData.whiteColor,
+            activeDayColor: Colors.white,
+            activeBackgroundDayColor: MyThemeData.primaryblue,
+            dotsColor: const Color(0xFF333A47),
+            shrink: true,
+            locale: 'en_US',
           ),
-          lastDate: DateTime.now().add(
-            const Duration(days: 360),
-          ),
-          onDateSelected: (date) {
-            listProvider.changeSelectedDate(date);
-          },
-          leftMargin: 21,
-          monthColor: MyThemeData.primaryblue,
-          dayColor: provider.appTheme==ThemeMode.light ? MyThemeData.blackColor : MyThemeData.whiteColor,
-          activeDayColor: Colors.white,
-          activeBackgroundDayColor: MyThemeData.primaryblue,
-          dotsColor: const Color(0xFF333A47),
-          locale: provider.appLanguage,
-        ),
         const SizedBox(
           height: 10,
         ),
